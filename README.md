@@ -31,7 +31,9 @@ The project's primary goals are to evaluate various cloud storage options and im
 
 ### How to run or perform the tests using the code?
 
-The **VM.py** file is a singular code file which contains all the operations that need to be done from setting the VM & storages, perform the tests on the storages and deleting the storages and VMs.
+The **VM.py** file is a singular code file which contains all the operations that need to be done from setting the VM & storages, perform the tests on the storages and deleting the storages and VMs. 
+
+* Open a command prompt window and run the VM.py file with project id as an argument
 
 Before running the **VM.py** file, it is necessary to add the service account key(json file) in the server_files folder else an error is invoked for no access to the GCP storages. 
 
