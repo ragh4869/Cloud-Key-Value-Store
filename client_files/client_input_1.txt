@@ -1,0 +1,11 @@
+set Hotel 5
+Wyatt
+set Destination 7
+Chicago
+get Hotel
+set Name 6
+Raghav
+get Name
+get Location
+set Country Yes
+USA
