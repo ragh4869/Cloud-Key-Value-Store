@@ -33,12 +33,23 @@ The project's primary goals are to evaluate various cloud storage options and im
 
 The **VM.py** file is a singular code file which contains all the operations that need to be done from setting the VM & storages, perform the tests on the storages and deleting the storages and VMs.
 
-Before running the **VM.py** file, it is necessary to add the service account key in the server_files folder else an error is invoked for no access to the GCP storages. 
+Before running the **VM.py** file, it is necessary to add the service account key(json file) in the server_files folder else an error is invoked for no access to the GCP storages. 
 
 Apart from running this single file, you will be prompted 3 times to run the Server VM through the command prompt as shown below:
 * The server-vm has to be started by opening the command prompt and running the code: gcloud compute ssh --zone=us-central1-a server-vm
 * After this, you should navigate to server_files: cd server_files/ 
 * Run the command python3 server.py storage_backend(Enter either native, bucket or datastore) – Example for native: python3 server.py native
+
+#### Code changes:
+
+The only code changes that need to be done is for the change in the name of the service account key (json file). This name change needs to be implemented in 2 code files which are **VM.py** and **server.py**. In the below code - 
+
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "raghav-cskumar-fall2022-387fa080baee.json"
+
+Instead of "raghav-cskumar-fall2022-387fa080baee.json", replace it with your service account key name (json file name).
+
+* VM.py: Line 91
+* server.py : Line 123
 
 ### Operations performed and tested:
 
